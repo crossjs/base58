@@ -1,0 +1,44 @@
+{
+  "name": "base58",
+  "description": "Base58 encode/decode the current selections.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "crossjs",
+    "email": "liwenfu@crossjs.com"
+  },
+  "homepage": "https://github.com/crossjs/base58",
+  "bugs": {
+    "url": "https://github.com/crossjs/base58/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crossjs/base58.git"
+  },
+  "main": "./lib/index.js",
+  "module": "./esm/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "prepublish": "yarn run compile && yarn run compile:esm",
+    "compile": "tsc -p ./",
+    "compile:esm": "yarn run compile -m es6 --outDir esm",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run lint",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "babel-jest": "^25.2.6",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.2.7",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": "eslint:recommended",
+  "env": {
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/class-name-casing": "warn",
+    "@typescript-eslint/semi": "warn",
+    "prettier/prettier": "error"
+  }
+}
