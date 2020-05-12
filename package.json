@@ -1,5 +1,5 @@
 {
-  "name": "base58",
+  "name": "@spax/base58",
   "description": "Base58 encode/decode the current selections.",
   "version": "0.0.1",
   "license": "MIT",
