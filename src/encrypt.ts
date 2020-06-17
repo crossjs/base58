@@ -2,11 +2,13 @@ const chars = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 const radix = chars.length;
 
 export function encode(num: number): string {
-  if (num < radix) {
-    return chars.charAt(num);
+  let str = "";
+  while (num >= radix) {
+    const remainder = num % radix;
+    str = `${chars.charAt(remainder)}${str}`;
+    num = (num - remainder) / radix;
   }
-  const remainder = num % radix;
-  return `${encode((num - remainder) / radix)}${chars.charAt(remainder)}`;
+  return `${chars.charAt(num)}${str}`;
 }
 
 export function decode(str: string): number {
